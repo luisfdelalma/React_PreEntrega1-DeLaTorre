@@ -1,16 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import NavBar from './components/NavBar.jsx';
-import ItemListContainer from './components/ItemListContainer';
+import { Header } from './components/header/Header';
+import { Main } from './components/main/Main';
+import { BrowserRouter } from 'react-router-dom';
+import { Footer } from './components/footer/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
-    </div>
-  );
+    return (
+        <>
+        <BrowserRouter>
+            <Header />
+            <Main /> 
+            <Footer />
+        </BrowserRouter>
+        </>
+    )
 }
 
 export default App;

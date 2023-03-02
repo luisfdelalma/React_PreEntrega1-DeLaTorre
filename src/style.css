@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=MedievalSharp&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MedievalSharp", cursive;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+}
+
+header {
+  display: flex;
+  background-color: #000;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 640px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.iconoBolsa {
+  width: 30px;
+  position: absolute;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+.menu .dropdown {
+  position: relative;
+}
+.menu .dropdown-menu.show {
+  display: block;
+}
+.menu .dropdown-menu {
+  z-index: 1000;
+  background: #610000;
+  position: absolute;
+  display: none;
+  text-align: left;
+  border-radius: 4px;
+  padding: 0.5rem 0.5rem;
+  min-width: 10rem;
+  border: 4px double #b68d2c;
+  inset: 10px auto auto 0px !important;
+}
+.menu .dropdown-menu .dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: inherit;
+  padding: 0.5rem 0;
+}
+.menu .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  color: #b68d2c;
+}
+.menu button {
+  font-size: 1.25rem;
+}
+.menu button a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu button a:hover {
+  color: #b68d2c;
+  transition: 0.5s all;
+}
+.menu li button:hover {
+  color: #b68d2c;
+  transition: 0.5s all;
+}
+
+.banderin {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #610000;
+  height: 50px;
+  width: 55px;
+  margin-bottom: 32px;
+  border-top: 4px double #b68d2c;
+  border-bottom: none;
+  z-index: 1;
+}
+.banderin::after {
+  content: "";
+  border-style: solid;
+  border-width: 15px 28px 12px 27px;
+  border-color: #610000 #610000 transparent #610000;
+  display: block;
+  position: absolute;
+  top: 274px;
+}
+.banderin p {
+  background-color: #1c440f;
+  color: #fff;
+  font-size: 1rem;
+  min-width: 20px;
+  padding: 2px 3px;
+  text-align: center;
+  position: relative;
+  bottom: 36px;
+  left: 23px;
+  z-index: 10;
+}
+.banderin p::after {
+  content: "";
+  border-style: solid;
+  border-width: 7px 7px 0px 0px;
+  border-color: #1c440f transparent transparent transparent;
+  display: block;
+  position: absolute;
+  left: 20%;
+  top: 22px;
+}
+
+.mensaje {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 30px;
+}
+.mensaje::first-letter {
+  font-size: 5rem;
+  color: #b68d2c;
+  background-color: #1c440f;
+  border: 8px double #b68d2c;
+  padding: 5px;
+}
+
+.itemList {
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1240px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  height: 330px;
+  justify-content: space-between;
+  padding: 9px 3px 0px;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3490196078);
+  border: 3px double #b68d2c;
+  margin-top: 40px;
+}
+.card .cardFoto {
+  width: 200px;
+  align-self: center;
+  border: 3px double #b68d2c;
+  background-color: #fff;
+}
+.card .detalles {
+  background-color: #fff;
+  width: 130px;
+  align-self: center;
+  margin-bottom: 10px;
+  padding: 4px;
+  position: relative;
+  border-bottom: 3px double #b68d2c;
+  border-top: 3px double #b68d2c;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3490196078));
+  color: #b68d2c;
+  text-decoration: none;
+  text-align: center;
+}
+.card .detalles:hover {
+  background-color: #1c440f;
+  transition: all 0.2s;
+}
+.card .detalles:hover::after {
+  border-color: #1c440f transparent #1c440f #1c440f;
+  transition: all 0.2s;
+}
+.card .detalles:hover::before {
+  border-color: #1c440f #1c440f #1c440f transparent;
+  transition: all 0.2s;
+}
+.card .detalles:active {
+  transition: all 0.1s;
+  width: 120px;
+}
+.card .detalles:active::after {
+  transition: all 0.1s;
+  border-width: 15px 4px 15px 0px;
+  left: 120px;
+}
+.card .detalles:active::before {
+  transition: all 0.1s;
+  border-width: 15px 0px 15px 4px;
+  right: 120px;
+}
+.card .detalles::after {
+  content: "";
+  border-style: solid;
+  border-width: 15px 10px 15px 0px;
+  border-color: #fff transparent #fff #fff;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 130px;
+}
+.card .detalles::before {
+  content: "";
+  border-style: solid;
+  border-width: 15px 0px 15px 10px;
+  border-color: #fff #fff #fff transparent;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 130px;
+}
+
+.contadorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  gap: 15px;
+}
+
+.contador {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #b68d2c;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+
+.suma, .resta {
+  font-size: 1.3rem;
+  background-color: #1c440f;
+  color: #b68d2c;
+  width: 30px;
+  height: 30px;
+  border: 4px double #b68d2c;
+  border-radius: 3px;
+}
+
+.resta {
+  background-color: #610000;
+}
+
+.agotado {
+  width: 150px;
+  color: #b68d2c;
+  font-size: 1.3rem;
+  background-color: #610000;
+  text-align: center;
+  border-bottom: 3px double #b68d2c;
+  border-top: 3px double #b68d2c;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3490196078));
+  position: relative;
+}
+.agotado::after {
+  content: "";
+  border-style: solid;
+  border-width: 12px 10px 12px 0px;
+  border-color: #610000 transparent #610000 #610000;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 150px;
+}
+.agotado::before {
+  content: "";
+  border-style: solid;
+  border-width: 12px 0px 12px 10px;
+  border-color: #610000 #610000 #610000 transparent;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 150px;
+}
+
+.agregar {
+  background-color: #fff;
+  color: #b68d2c;
+  width: 130px;
+  margin-bottom: 10px;
+  padding: 4px;
+  position: relative;
+  border-bottom: 3px double #b68d2c;
+  border-top: 3px double #b68d2c;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3490196078));
+}
+.agregar:hover {
+  background-color: #1c440f;
+  transition: all 0.2s;
+}
+.agregar:hover::after {
+  border-color: #1c440f transparent #1c440f #1c440f;
+  transition: all 0.2s;
+}
+.agregar:hover::before {
+  border-color: #1c440f #1c440f #1c440f transparent;
+  transition: all 0.2s;
+}
+.agregar:active {
+  transition: all 0.1s;
+  width: 120px;
+}
+.agregar:active::after {
+  transition: all 0.1s;
+  border-width: 15px 4px 15px 0px;
+  left: 120px;
+}
+.agregar:active::before {
+  transition: all 0.1s;
+  border-width: 15px 0px 15px 4px;
+  right: 120px;
+}
+.agregar::after {
+  content: "";
+  border-style: solid;
+  border-width: 15px 10px 15px 0px;
+  border-color: #fff transparent #fff #fff;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 130px;
+}
+.agregar::before {
+  content: "";
+  border-style: solid;
+  border-width: 15px 0px 15px 10px;
+  border-color: #fff #fff #fff transparent;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 130px;
+}
+
+.detailContainer {
+  max-width: 1240px;
+  margin-inline: auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 70px;
+  height: 600px;
+}
+
+.detailProducto {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detailTitulo {
+  font-size: 2.3rem;
+}
+
+.detailFoto {
+  width: 700px;
+}
+
+.detailPrecio {
+  font-size: 1.5rem;
+  color: #b68d2c;
+}
+
+.detailDescripcion {
+  font-family: "Macondo Swash Caps", cursive;
+  font-size: 23px;
+}
+
+.tarjetasContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tarjetasImg {
+  width: 110px;
+  background-color: #fff;
+  border: 3px double #b68d2c;
+  border-radius: 5px;
+}
+
+.marcasContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 200px;
+}
+
+.blanco {
+  position: relative;
+  border-top: 4px double #b68d2c;
+}
+.blanco::before {
+  content: "";
+  border-style: solid;
+  border-width: 15px 159px 81px 159px;
+  border-color: #fff #fff transparent #fff;
+  display: block;
+  position: absolute;
+  top: 229px;
+  filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.3490196078));
+}
+
+.negro {
+  background-color: #000;
+  border: 4px double #b68d2c;
+  position: relative;
+  filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.3490196078));
+}
+
+footer {
+  background-color: #000;
+  display: flex;
+  height: 180px;
+  margin-top: 200px;
+}
+footer h4 {
+  color: #fff;
+  text-decoration: underline;
+}
+footer .imgFooter {
+  width: 120px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #b68d2c;
+  transition: 0.5s all;
+}
+
+.heroBanner {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

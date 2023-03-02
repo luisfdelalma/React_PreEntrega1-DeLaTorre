@@ -1,0 +1,145 @@
+header{
+    display: flex;
+    background-color: $negro;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 640px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.brand{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.logo{
+    width: 150px;
+}
+
+.iconoBolsa{
+    width: 30px;
+    position: absolute;
+}
+
+.menu{
+    display: flex;
+    gap: 20px;
+
+    .dropdown{
+        position: relative;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-menu {
+        z-index: 1000;
+        background: $color-primario;
+        position: absolute;
+        display: none;
+        text-align: left;
+        border-radius: 4px;
+        padding: .5rem .5rem ;
+        min-width: 10rem;
+        border: 4px double $decoracion ;
+        inset: 10px auto auto 0px !important;
+
+        .dropdown-item {
+            display: block;
+            width: 100%;
+            text-align: inherit;
+            padding: 0.5rem 0;
+        }
+    }
+
+    .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+        color: $decoracion;
+    }
+
+    button{
+        font-size: 1.25rem;
+
+        a{
+            color: $blanco;
+            text-decoration: none;
+
+            &:hover{
+                color: $decoracion;
+                transition: .5s all;
+            }
+        }
+    }
+
+    li button:hover{
+        color: $decoracion;
+        transition: .5s all;
+    }
+}
+
+.banderin{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: $color-primario;
+    height: 50px;
+    width: 55px;
+    margin-bottom: 32px;
+    border-top: 4px double $decoracion;
+    border-bottom: none;
+    z-index: 1;
+
+    &::after{
+        content: "";
+        border-style: solid;
+        border-width: 15px 28px 12px 27px;
+        border-color: $color-primario $color-primario transparent $color-primario;
+        display: block;
+        position: absolute;
+        top: 274px;
+    }
+
+    p{
+        background-color: $color-secundario;
+        color: $blanco;
+        font-size: 1rem;
+        min-width: 20px;
+        padding: 2px 3px;
+        text-align: center;
+        position: relative;
+        bottom: 36px;
+        left: 23px;
+        z-index: 10;
+
+        &::after{
+            content: "";
+            border-style: solid;
+            border-width: 7px 7px 0px 0px;
+            border-color: $color-secundario transparent transparent transparent;
+            display: block;
+            position: absolute;
+            left: 20%;
+            top: 22px;
+        }
+    }
+}

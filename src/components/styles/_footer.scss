@@ -1,0 +1,25 @@
+footer{
+    background-color: $negro;
+    display: flex;
+    height: 180px;
+    margin-top: 200px;
+
+    h4{
+        color: $blanco;
+        text-decoration: underline;
+    }
+
+    .imgFooter{
+        width: 120px;
+    }
+
+    a{
+        color: $blanco;
+        text-decoration: none;
+
+        &:hover{
+            color: $decoracion;
+            transition: .5s all;
+        }
+    }
+}
